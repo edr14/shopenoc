@@ -1,0 +1,169 @@
+/* Componentes personalizados adicionales */
+
+/* Badges personalizados */
+.badge-custom {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+/* Cards de precios */
+.price-card {
+    border: 2px solid var(--primary-blue);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.price-card.featured {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 102, 204, 0.2);
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Listas personalizadas */
+.list-custom {
+    list-style: none;
+    padding: 0;
+}
+
+.list-custom li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.list-custom li:last-child {
+    border-bottom: none;
+}
+
+/* Iconos animados */
+.icon-animate {
+    transition: transform 0.3s ease;
+}
+
+.icon-animate:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Botones con iconos */
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Efectos de hover para imágenes */
+.img-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-hover:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Separadores decorativos */
+.section-divider {
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--primary-blue), transparent);
+    margin: 40px auto;
+    width: 100px;
+}
+
+/* Animaciones de entrada */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+    .text-center-mobile {
+        text-align: center;
+    }
+    
+    .mb-mobile-3 {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Estados de carga */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid var(--primary-blue);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Estilos específicos para autenticación */
+.membership-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.membership-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-blue);
+}
+
+.membership-card.featured {
+    border: 2px solid var(--primary-blue);
+}
+
+.membership-card.selected {
+    border: 2px solid var(--primary-blue);
+    box-shadow: 0 8px 25px rgba(0, 102, 204, 0.3);
+}
+
+/* Indicador de fortaleza de contraseña */
+.password-strength {
+    margin-top: 0.5rem;
+}
+
+.strength-weak { color: #dc3545; }
+.strength-medium { color: #ffc107; }
+.strength-strong { color: #198754; }
+
+/* Botones sociales */
+.btn-google {
+    background-color: #fff;
+    border-color: #ddd;
+    color: #757575;
+}
+
+.btn-google:hover {
+    background-color: #f8f9fa;
+    border-color: #ccc;
+}
+
+.btn-facebook {
+    background-color: #1877f2;
+    border-color: #1877f2;
+    color: white;
+}
+
+.btn-facebook:hover {
+    background-color: #166fe5;
+    border-color: #166fe5;
+}
